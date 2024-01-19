@@ -1,0 +1,382 @@
+* {
+    font-family: 'Space Grotesk';
+}
+@import "quill/dist/snow.css";
+
+.ck-editor__editable_inline{
+    height: 500px;
+}
+.form-text{
+    color: var(--text-icon-color);
+}
+::placeholder {
+    color: var(--text-color) !important; /* Warna placeholder */
+}
+hr{
+    color: var(--text-color);
+}
+
+body{
+    background-color: var(--body-color);
+    transition: var(--tran-04);
+}
+
+li{
+    list-style: none;
+}
+header{
+    width: 100%;
+}
+
+p{
+    color: var(--text-color);
+}
+
+span{
+    color: var(--text-color);
+}
+
+input[type="text"], select{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+input[type="email"], select{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+input[type="password"], select{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+input[type="file"]{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+
+input[type="date"]{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+input[type="time"]{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+input[type="color"]{
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+
+textarea {
+    color: var(--text-color) !important;
+    background-color: var(--sidebar-color) !important;
+}
+
+label{
+    color: var(--text-color);
+}
+
+:root {
+    /* color */
+    --body-color: white;
+    --main-color: white;
+    --navbar-color: white;
+    --toggle-color: #DDDD;
+    --text-color: black;
+    --text-icon-color: #a9b1bc;
+     /* transition */
+     --tran-02: all 0.2s ease;
+     --tran-03: all 0.3s ease;
+     --tran-04: all 0.4s ease;
+     --tran-05: all 0.5s ease;
+     --tran-06: all 0.6s ease;
+     --tran-07: all 0.7s ease;
+     --tran-08: all 0.8s ease;
+}
+
+/* navbar */
+.main-navbar{
+    height: 80px;
+    width: auto;
+    background: var(--main-color) !important;
+}
+
+.main-navbar ul{
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+.main-navbar .title{
+    font-weight: 1000;
+    color: var(--text-color);
+}
+.main-navbar ul li{
+    cursor: pointer;
+}
+
+.logo{
+    width: 40px;
+    color: var(--text-color);
+}
+
+.logout-button{
+    font-size: 1.2rem;
+    font-weight: 2000;
+    color: red;
+}
+
+.no-padding{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.main-navbar ul li a{
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+}
+
+.main-navbar ul li a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: var(--tran-04);
+}
+
+.main-navbar ul li a.active:after{
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: var(--tran-04);
+}
+
+.main-navbar ul li a:hover:after{
+    width: 100%;
+}
+
+
+.dark-mode li i{
+    cursor: pointer;
+}
+
+.section{
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 3px;
+    background-color: var(--text-color);
+    
+}
+
+/* dark mode */
+.dark-mode{
+    position: relative;
+}
+#dark-mode-switch{
+    position: absolute;
+    padding-bottom: 20px;
+}
+
+.fa-moon,
+.fa-sun{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+.fa-moon{
+    opacity: 0;
+    transition: var(--tran-04);
+}
+
+body.dark header i.fa-sun{
+    opacity: 0;
+    bottom: 10px;
+    transition: var(--tran-04);
+}
+
+body.dark header i.fa-moon{
+    opacity: 1;
+    transition: var(--tran-04);
+    color: var(--text-color);
+}
+
+
+
+body.dark{
+    --body-color: black;
+    --main-color: #363b3f;
+    --navbar-color: #363b3f;
+    --toggle-color: #DDDD;
+    --text-color: white;
+    --text-icon-color: #a9b1bc;
+}
+
+/* login */
+.container.login{
+    height: auto;
+    width: auto;
+}
+
+.login-form{
+    width: 80%;
+    min-height: 70dvh;
+    padding-top: 150px;
+}
+
+.login-form .card{
+    background-color: var(--main-color);
+}
+
+.login-image{
+    width: 95%;
+    height: 95%;
+}
+
+.login-form .image{
+    height: 70dvh;
+}
+
+.login-title{
+    font-weight: 1200;
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+/* dashboard */
+
+.dashboard-content{
+    padding-top: 140px;
+    width: 95%;
+    min-height: 70dvh;
+}
+.dashboard-content .card{
+    background-color: var(--main-color);
+}
+
+.admin-welcome{
+    font-size: 2rem;
+    font-weight: 1000;
+    letter-spacing: 20;
+}
+
+.choose-tags{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.choose-categories{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.choose-address{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.create-post{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.mini-card{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    font-size: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+.mini-card .icon{
+    font-size: 3rem;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+    width: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.delete-tag{
+    cursor: pointer;
+    color: white;
+    transition: var(--tran-04);
+}
+
+.save-tag{
+    cursor: pointer;
+    color: white;
+    transition: var(--tran-04);
+}
+
+.delete-category{
+    color: var(--text-color);
+}
+
+.list-post{
+    cursor: pointer;
+}
+
+.list-post-content{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list-posts-collection{
+    height: 400px;
+    overflow-y: auto;
+    /* padding-top: 120px; */
+}
+
+.created-at{
+    color: var(--text-color);
+    font-weight: 1000;
+}
+
+.updated-at{
+    color: var(--text-color);
+    font-weight: 1000;
+}
+
+.card-shadow {
+    cursor: pointer;
+    transition: var(--tran-05);  /* Efek transisi ketika shadow berubah */
+}
+
+.card-shadow:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Shadow yang akan muncul saat hover */
+}
+
+.sub-title{
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+
+.check-icon{
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #1A8652;
+    color: white;
+}
+
